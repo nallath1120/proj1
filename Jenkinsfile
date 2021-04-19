@@ -60,7 +60,7 @@ stages {
      steps {
          echo "Run containers" + dockerImage
          script {
-          sh "docker run -d -p 8081:80 $registry:$BUILD_NUMBER"
+          sh "docker run -d -p 4000:80 $registry:$BUILD_NUMBER"
                      }
                   }
   } 
