@@ -1,0 +1,15 @@
+---
+- hosts: appservers
+  become: yes
+  become_user: root
+  tasks:
+  - action: ping
+  - name: Install git
+    apt:
+     name: git
+     state: present
+     update_cache: yes
+  - name: Install Java
+    package:
+     name: openjdk-8-jdk
+     state: present
